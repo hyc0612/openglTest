@@ -20,7 +20,7 @@ link_libraries(${OPENGL_LIBRARIES})
 # GLUT
 find_package(GLUT REQUIRED)
 include_directories(${GLUT_INCLUDE_DIR})
-link_libraries( ${GLUT_LIBRARIES})
+link_libraries(${GLUT_LIBRARIES})
 
 # GLEW
 find_package(GLEW REQUIRED)
@@ -31,9 +31,8 @@ endif()
 
 link_directories("/usr/local/lib/")
 
-# target_link_libraries(openglTest1 "/usr/local/lib/libgltools.dylib")
-# target_link_libraries(openglTest1 "/usr/local/lib/libGLEW.2.1.0.dylib")
-# target_link_libraries(openglTest1 "/usr/local/lib/libglfw.dylib")
+link_libraries("/usr/local/lib/libgltools.dylib")
+link_libraries("/usr/local/lib/libGLEW.2.1.0.dylib")
 
 set(
     USR_INCLUDE_DIR
