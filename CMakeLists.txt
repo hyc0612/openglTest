@@ -9,18 +9,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # add the binary tree to the search path for include files
 # so that we will find TutorialConfig.h
-include_directories(openglTest1 PUBLIC
+include_directories( PUBLIC
                           "${PROJECT_BINARY_DIR}"
                           )
 
 find_package(OpenGL REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIR})
-link_libraries(openglTest1 ${OPENGL_LIBRARIES})
+link_libraries(${OPENGL_LIBRARIES})
 
 # GLUT
 find_package(GLUT REQUIRED)
 include_directories(${GLUT_INCLUDE_DIR})
-link_libraries(openglTest1 ${GLUT_LIBRARIES})
+link_libraries( ${GLUT_LIBRARIES})
 
 # GLEW
 find_package(GLEW REQUIRED)
